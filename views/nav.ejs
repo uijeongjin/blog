@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='/main.css'  rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div><a href='/main/0'>홈페이지</a></div>
+        <div><a href='/write'>글쓰기</a></div>
+        <div><a href='/profile'>프로필</a></div>
+        <% if (userId) { %>
+            <div><a href='/logOut'>로그아웃</a></div>
+        <% } else { %>
+            <div><a href='/moveLogin'>로그인</a></div>
+        <% } %>
+        <div><a href='/moveSignup'>회원가입</a></div>
+    </div>
+</body>
+</html>

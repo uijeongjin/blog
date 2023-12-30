@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="/main.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('nav') %>
+    <div class="login-container">
+        <form method="post" action="/login" class="login-form">
+            <h2 class="form-title">로그인</h2>
+            <input class="form-input" type="text" name="username" placeholder="아이디">
+            <input class="form-input" type="password" name="password" placeholder="비밀번호">
+            <button class="form-button" type='submit'>로그인</button>
+        </form>
+    </div>
+</body>
+</html>

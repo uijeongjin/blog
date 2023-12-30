@@ -1,0 +1,543 @@
+.navbar {
+    background-color: #f2f2f2; /* 네비게이션 바의 배경색 */
+    padding: 10px 0; /* 상하 패딩 */
+    text-align: center; /* 중앙 정렬 */
+}
+
+.navbar div {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 5px 10px; /* 내부 여백 */
+    font-size: 18px; /* 글꼴 크기 */
+    color: #333; /* 글꼴 색상 */
+    font-weight: bold; /* 글꼴 굵기 */
+    border-radius: 5px; /* 테두리 둥글게 */
+}
+
+.navbar div:hover {
+    background-color: #ddd; /* 호버시 배경색 변경 */
+    cursor: pointer; /* 마우스 커서 변경 */
+}
+
+
+
+
+
+
+/* 글쓰기 폼 스타일링 */
+.write-form-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.write-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.write-form .title-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.write-form .content-textarea {
+    width: 100%;
+    padding: 10px;
+    height: 150px; /* 세로 길이 설정 */
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical; /* 세로 방향으로만 크기 조절 가능 */
+}
+
+.submit-button {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+/* 메인 페이지 스타일링 */
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* 각 카드 사이에 적절한 간격 유지 */
+    padding: 20px;
+    margin-bottom: 220px; /* 페이지네이션과 검색 컨테이너의 높이에 맞춰 조정 */
+}
+
+.post-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 45%; /* 너비를 줄여서 한 줄에 두 개가 나오도록 조정 */
+}
+
+.post-title {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-content {
+    color: #666;
+}
+
+
+
+
+
+
+/* 페이지네이션 스타일링 */
+.pagination {
+    position: fixed;
+    bottom: 100px; /* 검색 컨테이너의 높이 위에 위치하도록 조정 */
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pagination a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination .active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+
+
+
+
+
+
+
+.detail-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.detail-title {
+    color: #333;
+    font-size: 28px;
+    margin: 0;
+}
+
+.content-container {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.detail-content {
+    color: #666;
+    line-height: 1.6;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-button, .delete-button {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px; /* 버튼 크기 줄임 */
+    border-radius: 3px; /* 둥근 모서리 반경 줄임 */
+    font-size: 0.8rem; /* 글꼴 크기 줄임 */
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.edit-button {
+    background-color: #007bff;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+
+
+
+
+/* 프로필 컨테이너 스타일링 */
+.profile-container {
+    background-color: #fff;
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 사용자 이름 스타일링 */
+.profile-username {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+/* 회원가입 컨테이너 스타일링 */
+.signup-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 폼 스타일링 */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-title {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+/* 로그인 컨테이너 스타일링 */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 폼 스타일링 */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-title {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #218838;
+}
+
+
+
+
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.profile-layout {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.profile-nav {
+    width: 200px;
+    border-right: 1px solid #ddd;
+    padding: 15px;
+}
+
+.profile-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-nav li {
+    margin-bottom: 10px;
+}
+
+.profile-nav a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px;
+}
+
+.profile-nav a:hover {
+    background-color: #f4f4f4;
+}
+
+.profile-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.profile-username {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.profile-details {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 댓글 보여줄 공간 스타일링 */
+.comment-display {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* 댓글 작성 폼 스타일링 */
+.comment-form {
+    display: flex;
+    align-items: center; /* 요소들을 세로 방향으로 정렬 */
+}
+
+.comment-input {
+    flex-grow: 1; /* 입력 필드가 가능한 많은 공간 차지 */
+    margin-right: 10px; /* 버튼과의 간격 설정 */
+}
+
+.comment-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.comment-submit {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-submit:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* 댓글 전체 컨테이너 스타일링 */
+.comment-display {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* 사용자 이름 스타일링 */
+.comment-username {
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+/* 댓글 내용 스타일링 */
+.comment-text {
+    color: #333;
+}
+
+
+.comment-error-message {
+    color: red; /* 오류 메시지는 빨간색으로 표시 */
+    margin-top: 10px; /* 메시지와 댓글 입력란 사이의 여백 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+
+
+
+
+
+
+/* 검색 컨테이너 스타일링 */
+.search-container {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* 검색 입력란 스타일링 */
+.search-input {
+    width: 70%; /* 너비 설정 */
+    padding: 10px; /* 여백 */
+    margin-right: 10px; /* 우측 여백 */
+    border: 1px solid #ddd; /* 테두리 */
+    border-radius: 4px; /* 모서리 둥글게 */
+}
+
+/* 검색 버튼 스타일링 */
+.search-button {
+    padding: 10px 20px; /* 여백 */
+    border: none; /* 테두리 제거 */
+    border-radius: 4px; /* 모서리 둥글게 */
+    background-color: #4CAF50; /* 배경색 */
+    color: white; /* 글자색 */
+    font-weight: bold; /* 글자 굵기 */
+    cursor: pointer; /* 마우스 커서 변경 */
+}
+
+/* 검색 버튼 호버 효과 */
+.search-button:hover {
+    background-color: #45a049; /* 호버 시 배경색 변경 */
+}
+
+
+

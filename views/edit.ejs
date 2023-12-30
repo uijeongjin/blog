@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/main.css", rel="stylesheet">
+</head>
+<body>
+    <%- include('nav') %>
+    <div class="write-form-container">
+        <form class="write-form" method="post" action="/edit/submit/<%= result._id %>">
+            <input type="text" name="title" placeholder="제목" class="title-input" value="<%= result.title %>">
+            <textarea name="content" placeholder="내용" class="content-textarea"><%= result.content %></textarea>
+            <button type="submit" class="submit-button">수정하기</button>
+        </form>
+    </div>
+</body>
+</html>

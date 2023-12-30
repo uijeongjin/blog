@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/main.css", rel="stylesheet">
+</head>
+<body>
+    <%- include('nav') %>
+    <div class="posts-container">
+        <% for( let i = 0; i < result.length ; i ++) { %>
+            <div class="post-card">
+                <h3 class="post-title"><a href='/detail/<%= result[i]._id %>'><%= result[i].title %></a></h3>
+                <p class="post-content"><%= result[i].content %></p>
+            </div>
+        <% } %>
+    </div>
+
+    <div class="pagination">
+        <% for(let i = 1; i <= totalPages; i++) { %>
+            <a href="/main/<%= i %>" class="<%= i === pageId ? 'active' : '' %>"><%= i %></a>
+        <% } %>
+    </div>
+
+    <div class="search-container">
+        <form method="GET" action="/search" class="search-form">
+            <input type="text" name="title" class="search-input" placeholder="검색어 입력...">
+            <button type="submit" class="search-button">검색</button>
+        </form>
+    </div>
+    
+    
+</body>
+</html>

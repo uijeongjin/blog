@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="/main.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('nav') %>
+    <div class="profile-layout">
+        <nav class="profile-nav">
+            <ul>
+                <li><a href="/posts/0">작성한 글목록</a></li>
+                <li><a href="/profile/info/edit">회원 정보 수정</a>
+            </ul>
+        </nav>
+        <div class="profile-content">
+            <div class="profile-username">회원 정보</div>
+            <div class="profile-details">
+                <p>아이디: <%= user.username %></p>
+                <p>주소: <%= user.address %></p>
+                <p>휴대전화 번호: <%= user.phonNum %></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

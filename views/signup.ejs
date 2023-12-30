@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link href="/main.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('nav') %>
+    <div class="signup-container">
+        <form method="post" action="/signup" class="signup-form">
+            <h2 class="form-title">회원가입</h2>
+            <input class="form-input" type="text" name="username" placeholder="아이디">
+            <input class="form-input" type="password" name="password" placeholder="비밀번호">
+            <button class="form-button" type='submit'>회원가입</button>
+            <% if (error) { %>
+                <div class="error-message"><%= error %></div>
+            <% } %>
+        </form>
+    </div>
+</body>
+</html>

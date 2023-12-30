@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/main.css", rel="stylesheet">
+</head>
+<body>
+    <%- include('nav') %>
+    <div class="write-form-container">
+        <form class="write-form" method="post" action="/add">
+            <input type="text" name="title" placeholder="제목" class="title-input">
+            <input type="hidden" name = userId value="<%= userId %>">
+            <textarea name="content" placeholder="내용" class="content-textarea"></textarea>
+            <button type="submit" class="submit-button">글쓰기</button>
+        </form>
+    </div>
+</body>
+</html>

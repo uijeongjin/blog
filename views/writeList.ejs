@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="/main.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('nav') %>
+    <div class="profile-layout">
+        <nav class="profile-nav">
+            <ul>
+                <li><a href="/posts">작성한 글목록</a></li>
+                <li><a href="/profile/info/edit">회원 정보 수정</a></li>
+                <!-- 추가적인 항목이 필요한 경우 여기에 추가 -->
+            </ul>
+        </nav>
+        <div class="profile-content">
+            <div class="posts-container">
+                <% for( let i = 0; i < result.length ; i ++) { %>
+                    <div class="post-card">
+                        <h3 class="post-title"><a href='/detail/<%= result[i]._id %>'><%= result[i].title %></a></h3>
+                        <p class="post-content"><%= result[i].content %></p>
+                    </div>
+                <% } %>
+            </div>
+        
+            <div class="pagination">
+                <% for(let i = 1; i <= totalPages; i++) { %>
+                    <a href="/posts/<%= i %>" class="<%= i === pageId ? 'active' : '' %>"><%= i %></a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="/main.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('nav') %>
+    <div class="profile-layout">
+        <nav class="profile-nav">
+            <ul>
+                <li><a href="/posts">작성한 글목록</a></li>
+                <li><a href="/profile/info/edit">회원 정보 수정</a>
+            </ul>
+        </nav>
+        <div class="profile-content">
+            <form method="post", action="/profileEdit">
+                <div>아이디 변경</div><input name="username">
+                <div>비밀번호 변경</div><input name="password">
+                <div>주소</div><input name="address">
+                <div>휴대전화 번호</div><input name="phonNum">
+                <button type="submit">변경하기</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

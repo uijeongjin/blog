@@ -1,6 +1,0 @@
-
-test 2에서 코드 수정함
->>>>>>> test2
-
-aaaaaa hi
-bbbbbbbbb

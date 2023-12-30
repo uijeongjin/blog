@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/main.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('nav') %>
+    <div class="detail-container">
+
+        <div class="title-container">
+            <h1 class="detail-title"><%= result.title %></h1>
+            <div class="button-container">
+                <% if (result.userId === sessionUserId) { %>
+                    <a href='/edit/<%= result._id%>' class="edit-button">수정하기</a>
+                    <a href='/delete/<%= result._id%>' class="delete-button">삭제하기</a>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="detail-content"><%= result.content %></div>
+        </div>
+
+        <div>
+            <% if(comments && comments.length > 0){ %>
+                <% comments.forEach(function(comment) { %>
+                    <div class="comment-display">
+                        <span class="comment-username"><%= comment.username %>:</span>
+                        <span class="comment-text"><%= comment.comment %></span>
+                    </div>
+                <% }); %>
+            <% } %>
+            
+            
+            
+            
+            <form method="post" action="/comment/<%= result._id %>" class="comment-form">
+                <input class="comment-input" name="comment" type="text" placeholder="댓글 작성 공간">
+                <button type="submit" class="comment-submit">댓글 작성</button>
+            </form>
+            <% if (error) { %>
+                <div class="comment-error-message"><%= error %></div>
+            <% } %>
+        </div>
+        
+    </div>
+</body>
+
+</html>
